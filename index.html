@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="22H is a modern clothing brand redefining fashion with bold designs and premium quality. Discover our latest collections and express your style with confidence." />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="queries.css" />
     <link rel="icon" href="img/favicon.png" />
@@ -52,50 +54,40 @@
     <title>22H</title>
   </head>
   <body>
-    <div class="announcement-bar">
-      <p>Uniquely Yours</p>
-    </div>
-
-    <section class="hero-section">
-      <nav class="navigation-bar">
+    <header class="header">
+      <div class="announcement-bar">
+        <p>Uniquely Yours</p>
+      </div>
+      <nav class="nav">
+        <div class="search-bar">
         <div class="search-box">
           <input type="text" placeholder="search" />
-          <a href="#">
+          <button  class="search--btn" type="submit">
             <ion-icon name="search-outline"></ion-icon>
-          </a>
+          </button>
         </div>
-        <a href="#"><img class="brand-logo" src="img/22H.png" alt=""></a>
+      </div>
+        <img class="brand-logo" src="img/22H.png" alt="">
 
-        <div class="user--chart">
-          <a href="#">
+        <div class="user-and-chart">
+          <button class="user--btn user-chart--btn open-sign-up--modal" type="button">
             <ion-icon name="person-outline"></ion-icon>
-          </a>
-          <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+          </button>
+          <button class="chart--btn user-chart--btn" type="button">
+            <ion-icon name="cart-outline"></ion-icon>
+          </button>
         </div>
       </nav>
 
-      <div class="hero-text">
-        <p>New Collection</p>
-        <h1>Deal w666 the devil</h1>
-        <a href="#collection"><button class="cta">
-          <span class="hover-underline-animation"> Shop now </span>
-          <svg
-            id="arrow-horizontal"
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="10"
-            viewBox="0 0 46 16"
-          >
-            <path
-              id="Path_10"
-              data-name="Path 10"
-              d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-              transform="translate(30)"
-            ></path>
-          </svg>
-        </button></a>
+      <div class="header--title">
+        <div class="header-text-box">
+          <p>New Collection</p>
+          <h1>Deal w666 the devil</h1>
+          <button class="btn-header btn--scroll-to">Get Yours Now</button>
+        </div>
       </div>
-    </section>
+        
+    </header>
 
     <div class="categories">
       <div class="categories-links">
@@ -111,7 +103,7 @@
       </div>
     </div>
 
-    <section class="partition">
+    <section class="section partition">
       <h2>New items that you can’t miss out on</h2>
 
       <div class="cards">
@@ -153,7 +145,7 @@
       </div>
     </section>
 
-    <section class="collection" id="collection">
+    <section class="section collection" id="collection">
       <h2>Deal w666 the devil</h2>
       <blockquote>
         "Beware of making deals with the devil, for he will always find a way to
@@ -205,17 +197,13 @@
         <div class="sale-text">
           <p>UP TO 50% OFF 22H.</p>
           <h2>EID DEALS</h2>
-          <a class="fancy" href="#">
-            <span class="top-key"></span>
-            <span class="text">Shop Now</span>
-            <span class="bottom-key-1"></span>
-            <span class="bottom-key-2"></span>
-          </a>
+          <button class="sale-btn">Shop Now</button>
+          </button>
         </div>
       </div>
     </div>
 
-    <section class="quick-add">
+    <section class="section quick-add">
       <div class="quick-add-grid">
         <div class="quick-img-9 quick-img"></div>
         <div class="quick-add-text-box">
@@ -226,35 +214,35 @@
           <p class="price">L.E 600</p>
 
 
-          <div class="size-containear">
-            <p class="size-label">Size</p>
-            <div class="size-selector">
-              <input type="radio" id="size-small" name="size" value="small" checked>
-              <label for="size-small">Small</label>
+            <!-- Size Container for First Box -->
+  <div class="size-container" id="box1-size">
+    <p class="size-label">Size</p>
+    <div class="size-selector">
+      <input type="radio" id="box1-size-small" name="box1-size" value="small" checked>
+      <label for="box1-size-small">Small</label>
       
-              <input type="radio" id="size-medium" name="size" value="medium">
-              <label for="size-medium">Medium</label>
+      <input type="radio" id="box1-size-medium" name="box1-size" value="medium">
+      <label for="box1-size-medium">Medium</label>
       
-              <input type="radio" id="size-large" name="size" value="large">
-              <label for="size-large">Large</label>
-            </div>
-          </div>
+      <input type="radio" id="box1-size-large" name="box1-size" value="large">
+      <label for="box1-size-large">Large</label>
+    </div>
+  </div>
 
-
-
-          <div class="color-containear">
-            <p class="color-label">Color</p>
-            <div class="color-selector">
-              <input type="radio" id="color-first" name="color" value="first" checked>
-              <label for="color-first">Black</label>
+  <!-- Color Container for First Box -->
+  <div class="color-container" id="box1-color">
+    <p class="color-label">Color</p>
+    <div class="color-selector">
+      <input type="radio" id="box1-color-black" name="box1-color" value="black" checked>
+      <label for="box1-color-black">Black</label>
       
-              <input type="radio" id="color-second" name="color" value="second">
-              <label for="color-second">White</label>
+      <input type="radio" id="box1-color-white" name="box1-color" value="white">
+      <label for="box1-color-white">White</label>
       
-              <input type="radio" id="color-third" name="color" value="third">
-              <label for="color-third">Beige</label>
-            </div>
-          </div>
+      <input type="radio" id="box1-color-beige" name="box1-color" value="beige">
+      <label for="box1-color-beige">Beige</label>
+    </div>
+  </div>
 
 
 
@@ -262,15 +250,15 @@
           <div class="quantity-container">
             <p class="quantity-label">Quantity</p>
             <div class="quantity-selector">
-              <button type="button" id="decrease" onclick="changeQuantity(-1)">-</button>
-              <input type="text" id="quantity" value="1" readonly>
-              <button type="button" id="increase" onclick="changeQuantity(1)">+</button>
+              <button onclick="changeQuantity(-1, 'quantityBox1')">-</button>
+  <input type="text" id="quantityBox1" value="1">
+  <button onclick="changeQuantity(1, 'quantityBox1')">+</button>
             </div>
           </div>
 
           <div class="quick-add-btns">
-           <a class="add-to-cart href="#"><ion-icon name="cart-outline"></ion-icon> Add to cart</a>
-           <a class="buy-it-now" href="#"><ion-icon name="bag-outline"></ion-icon> Buy it now</a>
+           <a class="add-to-cart href="#">Add to cart</a>
+           <a class="buy-it-now" href="#">Buy it now</a>
           </div>
 
            
@@ -288,46 +276,47 @@
           <p class="price">L.E 600</p>
 
 
-          <div class="size-containear">
-            <p class="size-label">Size</p>
-            <div class="size-selector">
-              <input type="radio" id="size-small" name="size" value="small" checked>
-              <label for="size-small">Small</label>
+          <!-- Size Container for Second Box -->
+  <div class="size-container" id="box2-size">
+    <p class="size-label">Size</p>
+    <div class="size-selector">
+      <input type="radio" id="box2-size-small" name="box2-size" value="small" checked>
+      <label for="box2-size-small">Small</label>
       
-              <input type="radio" id="size-medium" name="size" value="medium">
-              <label for="size-medium">Medium</label>
+      <input type="radio" id="box2-size-medium" name="box2-size" value="medium">
+      <label for="box2-size-medium">Medium</label>
       
-              <input type="radio" id="size-large" name="size" value="large">
-              <label for="size-large">Large</label>
-            </div>
-          </div>
+      <input type="radio" id="box2-size-large" name="box2-size" value="large">
+      <label for="box2-size-large">Large</label>
+    </div>
+  </div>
 
-          <div class="color-containear">
-            <p class="color-label">Color</p>
-            <div class="color-selector">
-              <input type="radio" id="color-first" name="color" value="first" checked>
-              <label for="color-first">Black</label>
+  <!-- Color Container for Second Box -->
+  <div class="color-container" id="box2-color">
+    <p class="color-label">Color</p>
+    <div class="color-selector">
+      <input type="radio" id="box2-color-black" name="box2-color" value="black" checked>
+      <label for="box2-color-black">Black</label>
       
-              <input type="radio" id="color-second" name="color" value="second">
-              <label for="color-second">White</label>
+      <input type="radio" id="box2-color-white" name="box2-color" value="white">
+      <label for="box2-color-white">White</label>
       
-              <input type="radio" id="color-third" name="color" value="third">
-              <label for="color-third">Beige</label>
-            </div>
-          </div>
-
+      <input type="radio" id="box2-color-beige" name="box2-color" value="beige">
+      <label for="box2-color-beige">Beige</label>
+    </div>
+  </div>
           <div class="quantity-container">
             <p class="quantity-label">Quantity</p>
             <div class="quantity-selector">
-              <button type="button" id="decrease" onclick="changeQuantity(-1)">-</button>
-              <input type="text" id="quantity" value="1" readonly>
-              <button type="button" id="increase" onclick="changeQuantity(1)">+</button>
+              <button onclick="changeQuantity(-1, 'quantityBox2')">-</button>
+              <input type="text" id="quantityBox2" value="1">
+              <button onclick="changeQuantity(1, 'quantityBox2')">+</button>
             </div>
           </div>
 
           <div class="quick-add-btns">
-           <a class="add-to-cart href="#"><ion-icon name="cart-outline"></ion-icon> Add to cart</a>
-           <a class="buy-it-now" href="#"><ion-icon name="bag-outline"></ion-icon> Buy it now</a>
+           <a class="add-to-cart href="#">Add to cart</a>
+           <a class="buy-it-now" href="#">Buy it now</a>
           </div>
 
       </div>
@@ -338,7 +327,7 @@
 
 
 
-    <section class="partition-2">
+    <section class="section partition-2">
       <h2>HOODIES</h2>
 
       <div class="cards">
@@ -402,20 +391,41 @@
 
     <div class="email-col">
       <p class="email-label">Exclusive Benefits</p>
-      <input
-        id="email"
-        type="email"
-        placeholder="Enter email here"
-        name="email"
-        required
-      />
-      <ion-icon class="email-arrow" name="chevron-forward-circle-outline"></ion-icon>
-      <p>Apply for our free membership to receive exclusive deals ,news ,and events</p>
+      <div class="email-bar">
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter email here"
+          name="email"
+          required
+        />
+        <ion-icon class="email-arrow" name="chevron-forward-circle-outline"></ion-icon>
+      </div>
+      <p>Apply for our free membership to receive exclusive deals, news, and events</p>
     </div>
+    
 
   </div>
 
 </footer>
+
+
+<div class="modal--sign-up hidden">
+  <button class="btn--close-modal">&times;</button>
+  <h2 class="modal--sign-up__header">
+    Open account
+  </h2>
+  <form class="modal--sign-up__form">
+    <label>First Name</label>
+    <input type="text" />
+    <label>Last Name</label>
+    <input type="text" />
+    <label>Email Address</label>
+    <input type="email" />
+    <button class="modal--sign-up-btn">Next step &rarr;</button>
+  </form>
+</div>
+<div class="overlay hidden"></div>
 
 
   </body>

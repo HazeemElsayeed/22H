@@ -8,8 +8,18 @@ html {
   font-size: 10px;
   font-size: 62.5%;
   overflow-x: hidden;
-  /* DOES NOT WORK ON SAFARI */
-  scroll-behavior: smooth;
+}
+
+/* General Elements */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+button {
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
 }
 
 /*****************************************/
@@ -22,35 +32,52 @@ html {
   text-align: center;
   color: #fff;
   background-color: black;
+  transition: top 0.3s ease; /* Add smooth transition */
 }
 
 /*****************************************/
 /* NAVIGATION BAR */
 /*****************************************/
 
-.navigation-bar {
+.nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  /* backdrop-filter: blur(30px); */
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  padding: 0 6rem;
+  z-index: 100;
+  transition: height 0.3s ease, top 0.3s ease;
+}
+
+.nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 200;
+}
+
+.search-bar {
+  width: 10rem;
 }
 
 .search-box {
   backdrop-filter: blur(30px);
+  width: 6.3rem;
   height: 3rem;
   border-radius: 40px;
   padding: 2rem 2rem;
   display: flex;
   align-items: center;
   transition: all 0.8s;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
-.search-box:hover input {
-  width: 15rem;
-  padding: auto;
-  cursor: pointer;
+.search-box:hover,
+.search-box:active {
+  width: 14rem;
 }
 
 .search-box input {
@@ -64,118 +91,96 @@ html {
   transition: all 0.8s;
 }
 
+.search-box:hover input,
+.search-box:active input {
+  width: 8rem;
+  padding: auto;
+  cursor: pointer;
+}
+
 .search-box input::placeholder {
   color: #fff;
 }
 
-.search-box a ion-icon {
+.search--btn ion-icon {
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
 }
 
 .brand-logo {
-  width: 12.5rem;
-  height: 6.5rem;
+  width: 9.5rem;
+  height: 4.5rem;
 }
 
-.user--chart {
+.user-and-chart {
   display: flex;
   gap: 3.4rem;
 }
 
-.user--chart a:link,
-.user--chart a:visited {
+.user-chart--btn ion-icon {
   color: #fff;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   transition: all 0.5s;
 }
 
-.user--chart a:hover,
-.user--chart a:active {
-  color: #858585;
+.user-chart--btn ion-icon:hover,
+.user-chart--btn ion-icon:active {
+  transform: translateY(-20%);
 }
-
 /*****************************************/
-/* HERO SECTION */
+/* Header */
 /*****************************************/
-
-.hero-section {
+.header {
   height: 100vh;
   background-image: url(img/hero.webp);
   background-size: cover;
-  position: relative;
+  background-repeat: no-repeat;
+  background-position: 69%;
 }
 
-.hero-text {
-  position: absolute;
-  transform: translateY(260%);
-  right: 70%;
+.header--title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 9.8rem 3.2rem 3.6rem 3.2rem;
+  max-width: 120rem;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header-text-box {
   color: #fff;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   font-family: "Space Mono", sans-serif;
 }
 
-.hero-text p {
+.header-text-box p {
   font-size: 1.4rem;
   font-weight: 400;
   margin-bottom: 2rem;
 }
 
-.hero-text h1 {
+.header-text-box h1 {
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 2rem;
 }
 
-.cta {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.cta span {
-  padding-bottom: 7px;
-  letter-spacing: 4px;
-  font-size: 14px;
-  padding-right: 15px;
-  text-transform: uppercase;
-}
-
-.cta svg {
-  fill: white;
-  transform: translateX(-8px);
-  transition: all 0.3s ease;
-}
-
-.cta:hover svg {
-  transform: translateX(0);
-}
-
-.cta:active svg {
-  transform: scale(0.9);
-}
-
-.hover-underline-animation {
-  position: relative;
+.btn-header {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #fff;
   color: #fff;
-  padding-bottom: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+  font-size: 1.4rem;
+  transition: all 0.5s ease-in-out;
 }
 
-.hover-underline-animation:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.cta:hover .hover-underline-animation:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+.btn-header:hover {
+  transform: translateY(-20%);
 }
 
 /*****************************************/
@@ -194,13 +199,13 @@ html {
 .btn_cate {
   position: relative;
   display: inline-block;
-  padding: 15px 30px;
+  padding: 1rem 1.5rem;
   border: 2px solid #000;
   text-transform: uppercase;
   color: #000;
   text-decoration: none;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 2.2rem;
   transition: 0.3s;
 }
 
@@ -248,18 +253,12 @@ html {
   z-index: 3;
 }
 
-button {
-  text-decoration: none;
-  border: none;
-  background-color: transparent;
-}
-
 /*****************************************/
 /* PARTITION SECTION */
 /*****************************************/
 
 .partition {
-  padding: 6.8rem 0 12.2rem 0;
+  padding: 6.8rem 0 0 0;
 }
 
 .partition h2 {
@@ -269,17 +268,17 @@ button {
 }
 
 .cards {
-  /* display: flex;
-  justify-content: space-between;*/
-  margin: 4rem 4.4rem 0 4.4rem;
   display: grid;
   grid-auto-flow: column;
-  overflow-x: auto;
+  margin: 4rem 4.4rem 0 4.4rem;
+  justify-content: space-around;
+  /*Tabelets & Phones */
+  /* overflow-x: auto; */
 }
 
 .card {
-  min-width: 310px;
-  height: 410px;
+  min-width: 12.5rem;
+  height: 33rem;
   text-decoration: none;
   cursor: pointer;
   overflow: hidden;
@@ -293,8 +292,8 @@ button {
 .card-img {
   display: inline-block;
   background-size: cover;
-  width: 310px;
-  height: 310px;
+  width: 20rem;
+  height: 20rem;
   transition: background-image 0.5s ease-in-out;
 }
 
@@ -398,7 +397,7 @@ button {
   font-family: "Space Mono", sans-serif;
   text-align: center;
   color: #891716;
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
 }
 
 .collection-container {
@@ -482,6 +481,13 @@ button {
   align-items: center;
 }
 
+.sale-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers horizontally */
+  justify-content: center; /* Centers vertically */
+}
+
 .sale-text p {
   font-size: 1.4rem;
   font-family: "Space Mono", sans-serif;
@@ -489,115 +495,29 @@ button {
 }
 
 .sale-text h2 {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-family: "Space Mono", sans-serif;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
-.fancy {
+.sale-btn {
   background-color: transparent;
   border: 2px solid #000;
-  border-radius: 0;
-  box-sizing: border-box;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   display: inline-block;
-  float: right;
+  margin: auto; /* Center if needed */
   font-weight: 700;
-  letter-spacing: 0.05em;
-  margin: 0;
-  outline: none;
-  overflow: visible;
-  padding: 1.25em 2em;
-  position: relative;
+  padding: 1.4rem 1.2rem;
   text-align: center;
-  text-decoration: none;
-  text-transform: none;
-  transition: all 0.3s ease-in-out;
-  user-select: none;
-  font-size: 13px;
+  font-size: 1.4rem;
+  transition: all 0.5s ease-in-out;
 }
 
-.fancy::before {
-  content: " ";
-  width: 1.5625rem;
-  height: 2px;
-  background: black;
-  top: 50%;
-  left: 1.5em;
-  position: absolute;
-  transform: translateY(-50%);
-  transform-origin: center;
-  transition: background 0.3s linear, width 0.3s linear;
-}
-
-.fancy .text {
-  font-size: 1.125em;
-  line-height: 1.33333em;
-  padding-left: 2em;
-  display: block;
-  text-align: left;
-  transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: black;
-}
-
-.fancy .top-key {
-  height: 2px;
-  width: 1.5625rem;
-  top: -2px;
-  left: 0.625rem;
-  position: absolute;
-  background: #e8e8e8;
-  transition: width 0.5s ease-out, left 0.3s ease-out;
-}
-
-.fancy .bottom-key-1 {
-  height: 2px;
-  width: 1.5625rem;
-  right: 1.875rem;
-  bottom: -2px;
-  position: absolute;
-  background: #e8e8e8;
-  transition: width 0.5s ease-out, right 0.3s ease-out;
-}
-
-.fancy .bottom-key-2 {
-  height: 2px;
-  width: 0.625rem;
-  right: 0.625rem;
-  bottom: -2px;
-  position: absolute;
-  background: #e8e8e8;
-  transition: width 0.5s ease-out, right 0.3s ease-out;
-}
-
-.fancy:hover {
-  color: white;
-  background: black;
-}
-
-.fancy:hover::before {
-  width: 0.9375rem;
-  background: white;
-}
-
-.fancy:hover .text {
-  color: white;
-  padding-left: 1.5em;
-}
-
-.fancy:hover .top-key {
-  left: -2px;
-  width: 0px;
-}
-
-.fancy:hover .bottom-key-1,
-.fancy:hover .bottom-key-2 {
-  right: 0;
-  width: 0;
+.sale-btn:hover {
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 /*****************************************/
@@ -667,6 +587,7 @@ button {
 .size-selector {
   display: flex;
   gap: 10px;
+  margin-bottom: 1.4rem;
 }
 
 .size-selector input[type="radio"] {
@@ -674,10 +595,10 @@ button {
 }
 
 .size-selector label {
-  padding: 14px 28px;
+  padding: 1.4rem 2.8rem;
   border: 1px solid #ccc;
   border-radius: 30px;
-  font-size: 14px;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -709,10 +630,10 @@ button {
 }
 
 .color-selector label {
-  padding: 14px 28px;
+  padding: 1.4rem 2.8rem;
   border: 1px solid #ccc;
   border-radius: 30px;
-  font-size: 14px;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -758,7 +679,7 @@ button {
 }
 
 .quantity-selector input[type="text"] {
-  width: 40px;
+  width: 2.5rem;
   text-align: center;
   border: none;
   border-left: 1px solid #ccc;
@@ -788,11 +709,12 @@ button {
   font-weight: 600;
   text-decoration: none;
   text-align: center;
+  border: 2px solid transparent;
   color: #fff;
   padding: 1.4rem 14.2rem;
   background-color: #000;
   cursor: pointer;
-  transition: all 0.6s;
+  transition: all 0.8s;
   position: relative;
 }
 
@@ -801,13 +723,6 @@ button {
   border: 2px solid #000;
   color: #000;
   background-color: transparent;
-  overflow: hidden;
-}
-
-.add-to-cart ion-icon {
-  position: absolute;
-  top: 15px;
-  left: 31%;
 }
 
 .buy-it-now,
@@ -818,6 +733,7 @@ button {
   text-decoration: none;
   text-align: center;
   color: #fff;
+  border: 2px solid transparent;
   padding: 1.4rem 14.2rem;
   background-color: #000;
   cursor: pointer;
@@ -830,14 +746,6 @@ button {
   border: 2px solid #000;
   color: #000;
   background-color: transparent;
-  overflow: hidden;
-}
-
-.buy-it-now ion-icon {
-  position: absolute;
-  top: 15px;
-  left: 31%;
-  position: absolute;
 }
 
 /*****************************************/
@@ -866,12 +774,12 @@ footer {
 .footer-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 2rem;
 }
 
 .footer-logo {
-  width: 12.5rem;
-  height: 6.5rem;
+  width: 9rem;
+  height: 4.5rem;
   margin-bottom: 1.2rem;
   filter: brightness(0);
   opacity: 50%;
@@ -912,7 +820,6 @@ footer {
 .info-col a {
   font-size: 2rem;
   text-decoration: none;
-
   color: #000;
   transition: all 0.5s;
 }
@@ -930,19 +837,120 @@ footer {
   margin-bottom: 3.2rem;
 }
 
-.email-col input {
-  padding: 1.2rem 5.2rem 1.2rem 0;
-  border: none;
-  border-bottom: solid 2px #eee;
-  margin-bottom: 1.8rem;
+.email-bar {
   position: relative;
+  display: flex;
+  align-items: center;
+  width: 20rem;
+}
+
+.email-col input {
+  padding: 1.2rem 5.2rem 1.2rem 1rem;
+  border: none;
+  margin-bottom: 1.8rem;
+  border-bottom: solid 2px #eee;
+  width: 20rem;
+  flex: 1;
 }
 
 .email-arrow {
   position: absolute;
-  transform: translateY(33%);
-  left: 87.5%;
+  right: 2%;
+  top: 34%;
+  transform: translateY(-50%);
   color: #858585;
   height: 2.4rem;
   width: 2.4rem;
+  cursor: pointer;
+}
+
+/*****************************************/
+/* Modals */
+/*****************************************/
+.modal--sign-up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background-color: #f3f3f3;
+  padding: 5rem 6rem;
+  border-radius: 72px;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.modal--sign-up__header {
+  color: #000000;
+  font-size: 3.25rem;
+  margin: 0 0 4.5rem 0;
+  line-height: 1.5;
+}
+
+.modal--sign-up__form {
+  margin: 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.modal--sign-up__form label {
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.modal--sign-up__form input {
+  font-size: 1.7rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+}
+
+.modal--sign-up-btn {
+  grid-column: 1 / span 2;
+  justify-self: center;
+  margin-top: 1rem;
+  text-decoration: none;
+  font-size: 2.2rem;
+  font-weight: 400;
+  padding: 2rem 4rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: #f3f0ff;
+  background-color: #000000;
+  transition: all 0.8s;
+}
+
+.modal--sign-up-btn:hover,
+.modal--sign-up-btn:active {
+  border: 2px solid #000000;
+  background-color: #f3f3f3;
+  color: #000000;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: #000000;
+  position: absolute;
+  top: 2.5rem;
+  right: 4rem;
+  font-size: 4rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: none;
 }
