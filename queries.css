@@ -1,0 +1,738 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/*****************************************/
+/* BELOW 3840px (Desktop 4k 1x scale) */
+/*****************************************/
+@media (max-width: 240em) {
+}
+/*****************************************/
+/* BELOW 2560px (Desktop iMac Retina 2016 27") */
+/*****************************************/
+@media (max-width: 160em) {
+  html {
+    font-size: 111%;
+  }
+}
+
+/*****************************************/
+/* BELOW 2048px (Desktop iMac Retina 4k 21.5") */
+/*****************************************/
+@media (max-width: 128em) {
+}
+
+/*****************************************/
+/* BELOW 1920 x 1080 (Desktop) */
+/*****************************************/
+@media (max-width: 120em) {
+  html {
+    font-size: 95%;
+  }
+
+  .grid--2--cols {
+    gap: 8rem;
+  }
+
+  .quick-add-product {
+    gap: 4rem;
+  }
+}
+
+/*****************************************/
+/* BELOW 1680 x 1050 (Desktop) */
+/*****************************************/
+@media (max-width: 105em) {
+  html {
+    font-size: 93%;
+  }
+
+  .header {
+    background-position: 38%;
+    background-position-y: -62%;
+  }
+
+  .grid--2--cols {
+    gap: 8rem;
+  }
+
+  .quick-add-product {
+    gap: 4rem;
+  }
+}
+/*****************************************/
+/* BELOW 1600 x 900 (Desktop) */
+/*****************************************/
+@media (max-width: 100em) {
+  html {
+    font-size: 92%;
+  }
+
+  .grid--2--cols {
+    gap: 8rem;
+  }
+
+  .quick-add-product {
+    gap: 4rem;
+  }
+}
+
+/*****************************************/
+/* BELOW 1440 x 900 (macbook pro) */
+/*****************************************/
+@media (max-width: 90em) {
+  html {
+    font-size: 90%;
+  }
+
+  .header {
+    background-position: 39%;
+    background-position-y: 44%;
+  }
+
+  .grid--2--cols {
+    gap: 8rem;
+  }
+
+  .quick-add-product {
+    gap: 4rem;
+  }
+}
+
+/*****************************************/
+/* BELOW 1366 x 768 (Laptops) */
+/*****************************************/
+@media (max-width: 85.375em) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    background-position: 29%;
+  }
+
+  .grid--2--cols {
+    gap: 4rem;
+  }
+
+  .quick-add-product {
+    gap: 4rem;
+  }
+}
+
+/*****************************************/
+/* BELOW 1320px (Laptops) */
+/*****************************************/
+@media (max-width: 82.5em) {
+}
+/*****************************************/
+/* BELOW 1280 x 800 (Small laptop) */
+/*****************************************/
+@media (max-width: 80em) {
+  html {
+    font-size: 55%;
+  }
+
+  .grid--2--cols {
+    gap: 4rem;
+  }
+
+  .quick-add-product {
+    gap: 4rem;
+  }
+}
+
+/*****************************************/
+/* BELOW 1200px (landscape tablets) */
+/*****************************************/
+@media (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/*****************************************/
+/* BELOW 1075 px (landscape tablets) */
+/*****************************************/
+@media (max-width: 67.188em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/*****************************************/
+/* BELOW 1024 x 768 (landscape tablets) */
+/*****************************************/
+@media (max-width: 64em) {
+  html {
+    font-size: 50%;
+  }
+
+  .cards {
+    overflow-x: auto;
+  }
+
+  .grid--2--cols {
+    gap: 4rem;
+  }
+
+  .quick-img {
+    width: 50rem;
+    height: 50rem;
+  }
+
+  .quick-add-product {
+    gap: 2.8rem;
+  }
+}
+
+/*****************************************/
+/* BELOW 960 x 600 (Tablets) */
+/*****************************************/
+@media (max-width: 60em) {
+  html {
+    font-size: 50%;
+  }
+
+  .cards {
+    overflow-x: auto;
+  }
+
+  .grid--2--cols {
+    gap: 4rem;
+  }
+
+  .quick-img {
+    width: 50rem;
+    height: 50rem;
+  }
+
+  .quick-add-product {
+    gap: 2.8rem;
+  }
+
+  footer {
+    padding: 8.8rem 2.4rem;
+  }
+}
+
+/*****************************************/
+/* BELOW 920px */
+/*****************************************/
+@media (max-width: 57.5em) {
+  .header {
+    background-position: 47%;
+  }
+}
+
+/*****************************************/
+/* BELOW 850 x 480 (tablets) */
+/*****************************************/
+@media (max-width: 53.125em) {
+  html {
+    font-size: 45%;
+  }
+}
+/*****************************************/
+/* BELOW 800 x 480 (Tablets) */
+/*****************************************/
+@media (max-width: 50em) {
+  html {
+    font-size: 40%;
+  }
+
+  .cards {
+    overflow-x: auto;
+  }
+
+  .grid--2--cols {
+    gap: 4rem;
+  }
+
+  .quick-img {
+    width: 50rem;
+    height: 50rem;
+  }
+
+  .quick-add-product {
+    gap: 5.8rem;
+  }
+
+  footer {
+    padding: 8.8rem 2.4rem;
+  }
+}
+
+/*****************************************/
+/* BELOW 768px (tablets) */
+/*****************************************/
+@media (max-width: 48em) {
+  html {
+    font-size: 38%;
+  }
+
+  .header {
+    height: 80vh;
+    background-position: 38%;
+    background-position-y: 24%;
+  }
+
+  .brand-logo {
+    width: 7.5rem;
+    height: 3.5rem;
+  }
+
+  .modal--sign-up {
+    top: 50%;
+    left: 50%;
+    max-width: 60rem;
+    padding: 6rem 3rem;
+  }
+
+  .modal--sign-up__header {
+    margin: 1.1rem 1.1rem 3.5rem 1.1rem;
+  }
+
+  .btn--close-modal {
+    top: 3.5rem;
+    right: 5rem;
+  }
+
+  .modal--sign-up-btn {
+    font-size: 2.2rem;
+    padding: 1.4rem 4.4rem;
+  }
+
+  .btn_cate {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #000;
+    font-size: 1.8rem;
+  }
+
+  .partition {
+    padding: 3.8rem 0 0 0;
+  }
+
+  .partition h2 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    min-width: 26.5rem;
+    height: 35rem;
+  }
+
+  .collection-img {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .sale {
+    padding: 1.2rem 0 1.2rem 0;
+  }
+
+  .sale-btn {
+    font-weight: 500;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid #000;
+  }
+
+  .sale-text-container {
+    width: 18rem;
+    height: 9rem;
+  }
+
+  .quick-add-product {
+    display: inline-block;
+  }
+
+  .quick-img {
+    width: 38rem;
+    height: 38rem;
+  }
+
+  .quick-add-text-box {
+    margin: 2rem 2rem 8rem 2rem;
+  }
+
+  .quick-add-text-box .item-name {
+    font-size: 2.8rem;
+  }
+
+  .quick-add-text-box .price {
+    margin: 1.2rem 0 3.2rem 0;
+  }
+
+  .price {
+    font-size: 1.4rem;
+  }
+
+  .size-selector label {
+    padding: 2.2rem 3.8rem;
+    font-size: 1.4rem;
+  }
+
+  .size-label {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .size-selector {
+    margin-bottom: 3.4rem;
+  }
+
+  .color-label {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .color-selector {
+    margin-bottom: 3.4rem;
+  }
+
+  .color-selector label {
+    padding: 2.2rem 3.8rem;
+    font-size: 1.4rem;
+  }
+
+  .quick-add-btns {
+    width: 44rem;
+  }
+
+  .add-to-cart,
+  .add-to-cart:link,
+  .add-to-cart:visited {
+    padding: 2.2rem 14.2rem;
+  }
+
+  .buy-it-now,
+  .buy-it-now:link,
+  .buy-it-now:visited {
+    padding: 2.2rem 14.2rem;
+  }
+
+  .product-modal {
+    width: 50rem;
+  }
+
+  .product-close-modal {
+    top: 1.5rem;
+    right: 4.5rem;
+    font-size: 5rem;
+  }
+
+  .product-add-to-cart {
+    margin-top: 1rem;
+    padding: 2rem 8rem;
+  }
+}
+
+/*****************************************/
+/* BELOW 560px (Phones) */
+/*****************************************/
+@media (max-width: 35em) {
+  html {
+    font-size: 45%;
+  }
+  .header {
+    height: 80vh;
+  }
+
+  .brand-logo {
+    width: 7.5rem;
+    height: 3.5rem;
+  }
+
+  .modal--sign-up {
+    top: 50%;
+    left: 50%;
+    max-width: 46rem;
+    padding: 3rem 3rem;
+  }
+
+  .modal--sign-up__header {
+    margin: 1.1rem 1.1rem 3.5rem 1.1rem;
+  }
+
+  .btn--close-modal {
+    top: 3.5rem;
+    right: 5rem;
+  }
+
+  .modal--sign-up-btn {
+    font-size: 2.2rem;
+    padding: 1.4rem 2.4rem;
+  }
+
+  .btn_cate {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #000;
+    font-size: 1.8rem;
+  }
+
+  .partition {
+    padding: 3.8rem 0 0 0;
+  }
+
+  .partition h2 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    min-width: 26.5rem;
+    height: 35rem;
+  }
+
+  .collection-img {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .sale {
+    padding: 1.2rem 0 1.2rem 0;
+  }
+
+  .sale-btn {
+    font-weight: 500;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid #000;
+  }
+
+  .sale-text-container {
+    width: 18rem;
+    height: 9rem;
+  }
+
+  .quick-add-product {
+    display: inline-block;
+  }
+
+  .quick-img {
+    width: 38rem;
+    height: 38rem;
+  }
+
+  .quick-add-text-box {
+    margin: 2rem 2rem 8rem 2rem;
+  }
+
+  .quick-add-text-box .item-name {
+    font-size: 2.8rem;
+  }
+
+  .quick-add-text-box .price {
+    margin: 1.2rem 0 3.2rem 0;
+  }
+
+  .price {
+    font-size: 1.4rem;
+  }
+
+  .size-selector label {
+    padding: 2.2rem 3.8rem;
+    font-size: 1.4rem;
+  }
+
+  .product-size label {
+    padding: 1.2rem 2.8rem;
+    font-size: 1.4rem;
+  }
+
+  .size-label {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .size-selector {
+    margin-bottom: 3.4rem;
+  }
+
+  .color-label {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .color-selector {
+    margin-bottom: 3.4rem;
+  }
+
+  .color-selector label {
+    padding: 2.2rem 3.8rem;
+    font-size: 1.4rem;
+  }
+
+  .product-color label {
+    padding: 1.2rem 2.8rem;
+    font-size: 1.4rem;
+  }
+
+  .quick-add-btns {
+    width: 33rem;
+  }
+
+  .add-to-cart,
+  .add-to-cart:link,
+  .add-to-cart:visited {
+    padding: 1.2rem 10.2rem;
+  }
+
+  .buy-it-now,
+  .buy-it-now:link,
+  .buy-it-now:visited {
+    padding: 1.2rem 10.2rem;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-col a {
+    font-size: 1.6rem;
+  }
+
+  .info-col {
+    flex-direction: row;
+    max-width: fit-content;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 2rem;
+  }
+
+  .email-col {
+    margin-top: 5rem;
+    width: 32rem;
+    font-size: 1.4rem;
+  }
+
+  .email-label {
+    margin-bottom: 2.2rem;
+  }
+
+  .product-modal {
+    width: 40rem;
+  }
+}
+
+/*****************************************/
+/* BELOW 490 x 932 Desgin breakpoint */
+/*****************************************/
+@media (max-width: 30.625em) {
+  html {
+    font-size: 42%;
+  }
+}
+
+/*****************************************/
+/* BELOW 430 x 932 Desgin breakpoint */
+/*****************************************/
+@media (max-width: 26.875em) {
+  .header {
+    background-image: url(img/Mobile-Background.webp);
+    background-position: 38%;
+    background-position-y: 24%;
+  }
+}
+
+/*****************************************/
+/* BELOW 414 x 736 Desgin breakpoint */
+/*****************************************/
+@media (max-width: 25.875em) {
+}
+
+/*****************************************/
+/* BELOW 375px (small Phones) */
+/*****************************************/
+@media (max-width: 23.438em) {
+  html {
+    font-size: 40%;
+  }
+
+  .header {
+    background-position: 48%;
+  }
+
+  .header--title {
+    padding: 35.8rem 3.2rem 3.6rem 3.2rem;
+  }
+
+  .product-add-to-cart,
+  .product-add-to-cart:link,
+  .product-add-to-cart:visited {
+    font-size: 1.2rem;
+    padding: 1.6rem 4rem;
+  }
+}
+
+/*****************************************/
+/* BELOW 320px (small Phones) */
+/*****************************************/
+@media (max-width: 20em) {
+}
+
+/*****************************************/
+/* 347px (very small devices Phones) */
+/*****************************************/
+@media (max-width: 21.688em) {
+}
+/************************************/
+/* Fixing Safari flexbox gap */
+/***********************************/
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}

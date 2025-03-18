@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="22H is a modern clothing brand redefining fashion with bold designs and premium quality. Discover our latest collections and express your style with confidence." />
+    <meta name="keywords" content="22H, clothing brand, fashion, streetwear, hoodies, t-shirts, pants">
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <link rel="icon" href="img/favicon.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script defer src="script.js"></script>
+
+    <title>22H</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="announcement-bar">
+        <p>Uniquely Yours</p>
+      </div>
+      <nav class="nav">
+        <div class="search-bar">
+        <div class="search-box">
+          <input type="text" placeholder="search" />
+          <button  class="search--btn" type="submit">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+        <img class="brand-logo" src="img/22H.png" alt="">
+
+        <div class="user-and-chart">
+          <button class="user--btn user-chart--btn open-sign-up--modal" type="button">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+          <button class="chart--btn user-chart--btn" type="button">
+            <ion-icon name="cart-outline"></ion-icon>
+          </button>
+        </div>
+      </nav>
+
+      <div class="header--title">
+        <div class="header-text-box">
+          <p>New Collection</p>
+          <h1>Deal with the devil</h1>
+          <button class="btn-header btn--scroll-to">Get Yours Now</button>
+        </div>
+      </div>
+        
+    </header>
+
+    <div class="categories">
+      <div class="categories-links">
+        <button>
+          <a href="#" class="btn_cate"><span class="spn2">Hoodies</span></a>
+        </button>
+        <button>
+          <a href="#" class="btn_cate"><span class="spn2">T_Shirts</span></a>
+        </button>
+        <button>
+          <a href="#" class="btn_cate"><span class="spn2">Pants</span></a>
+        </button>
+      </div>
+    </div>
+
+    <section class="section partition">
+      <h2>New items that you can’t miss out on</h2>
+
+      <div class="cards">
+        <div class="card product-card" data-name="Product 1" data-price="L.E 600" data-img="img/cards/Product1-Black.webp">
+          <div class="card-img-1 card-img"></div>
+          <div class="card-detials">
+            <p class="brand">22H</p>
+            <p class="item-name">"Item Name"</p>
+            <p class="price">L.E 600</p>
+          </div>
+        </div>
+
+        <div class="card product-card" data-name="Product 2" data-price="L.E 600" data-img="img/cards/Person-Front2.webp">
+          <div class="card-img-2 card-img"></div>
+          <div class="card-detials">
+            <p class="brand">22H</p>
+            <p class="item-name">"Item Name"</p>
+            <p class="price">L.E 600</p>
+          </div>
+        </div>
+
+        <div class="card product-card" data-name="Product 3" data-price="L.E 600" data-img="img/cards/Person-Front3.webp">
+          <div class="card-img-3 card-img"></div>
+          <div class="card-detials">
+            <p class="brand">22H</p>
+            <p class="item-name">"Item Name"</p>
+            <p class="price">L.E 600</p>
+          </div>
+        </div>
+
+        <div class="card product-card" data-name="Product 4" data-price="L.E 600" data-img="img/cards/Person-Front4.webp">
+          <div class="card-img-4 card-img"></div>
+          <div class="card-detials">
+            <p class="brand">22H</p>
+            <p class="item-name">"Item Name"</p>
+            <p class="price">L.E 600</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="product-modal hidden">
+        <button class="product-close-modal">&times;</button>
+        <div class="product-modal-content">
+            <img class="product-modal-image" src="" alt="">
+            <h3 class="product-modal-name"></h3>
+            <p class="product-modal-price"></p>
+            
+          <!-- Size Container for Second Box -->
+            <div class="size-container" id="box1-size">
+              <p class="size-label">Size</p>
+              <div class="product-size size-selector">
+                <input type="radio" id="box1-size-small" name="box1-size" value="small" checked>
+                <label for="box1-size-small">Small</label>
+      
+                <input type="radio" id="box1-size-medium" name="box1-size" value="medium">
+                <label for="box1-size-medium">Medium</label>
+      
+                <input type="radio" id="box1-size-large" name="box1-size" value="large">
+                <label for="box1-size-large">Large</label>
+              </div>
+            </div>
+
+            <!-- Color Container for Second Box -->
+            <div class="color-container" id="box1-color">
+              <p class="color-label">Color</p>
+              <div class="product-color color-selector">
+               <input type="radio" id="box1-color-black" name="box1-color" value="black" checked>
+                <label for="box1-color-black">Black</label>
+      
+                <input type="radio" id="box1-color-white" name="box1-color" value="white">
+                <label for="box1-color-white">White</label>
+      
+                <input type="radio" id="box1-color-beige" name="box1-color" value="beige">
+                <label for="box1-color-beige">Beige</label>
+              </div>
+            </div>
+            <div class="product-quantity quantity-container">
+             <p class="quantity-label">Quantity</p>
+              <div class="quantity-selector">
+                <button onclick="changeQuantity(-1, 'quantityBox1')">-</button>
+                <input type="text" id="quantityBox1" value="1">
+                <button onclick="changeQuantity(1, 'quantityBox1')">+</button>
+              </div>
+            </div>
+            <button class="product-add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-overlay hidden"></div>
+      
+    </section>
+
+
+
+    <section class="section collection" id="collection">
+      <h2>Deal with the devil</h2>
+      <blockquote>
+        "Beware of making deals with the devil, for he will always find a way to
+        collect his debts."
+      </blockquote>
+      <div class="collection-container">
+        <div class="grid--2--cols">
+          <div  class="card-collec product-card" data-name="Product 9" data-price="L.E 600" data-img="img/collection/Product9-Black.webp">
+            <div class="collection-img-11 collection-img"></div>
+            <div class="card-detials">
+              <p class="brand">22H</p>
+              <p class="item-name">"Item Name"</p>
+              <p class="price">L.E 600</p>
+            </div>
+          </div>
+
+          <div class="card-collec product-card" data-name="Product 10" data-price="L.E 600" data-img="img/collection/Product10-Black.webp">
+            <div class="collection-img-12 collection-img"></div>
+            <div class="card-detials">
+              <p class="brand">22H</p>
+              <p class="item-name">"Item Name"</p>
+              <p class="price">L.E 600</p>
+            </div>
+          </div>
+
+          <div class="card-collec product-card" data-name="Product 11" data-price="L.E 600" data-img="img/collection/Product11-White.webp">
+            <div class="collection-img-13 collection-img"></div>
+            <div class="card-detials">
+              <p class="brand">22H</p>
+              <p class="item-name">"Item Name"</p>
+              <p class="price">L.E 600</p>
+            </div>
+          </div>
+
+          <div class="card-collec product-card" data-name="Product 12" data-price="L.E 600" data-img="img/collection/Product12-White.webp">
+            <div class="collection-img-14 collection-img"></div>
+            <div class="card-detials">
+              <p class="brand">22H</p>
+              <p class="item-name">"Item Name"</p>
+              <p class="price">L.E 600</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="sale">
+      <div class="sale-text-container">
+        <div class="sale-text">
+          <p>UP TO 50% OFF 22H.</p>
+          <h2>EID DEALS</h2>
+          <button class="sale-btn">Shop Now</button>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="section quick-add">
+      <div class="quick-add-container">
+        <div class="quick-add-product" data-name="Product 13" data-price="L.E 600" data-images='{"black":"img/Quick-add/Product13-Black.webp", "white":"img/Quick-add/Product13-White.webp", "beige":"img/Quick-add/Product13-Beige.webp"}'>
+        <div class="quick-img-9 quick-img"></div>
+        <div class="quick-add-text-box">
+          <p class="brand">22H</p>
+          <h1 class="item-name">"Item Name"</h1>
+          <p class="price">L.E 600</p>
+          <div class="size-container" id="box2-size">
+            <p class="size-label">Size</p>
+            <div class="size-selector">
+              <input type="radio" id="box2-size-small" name="box2-size" value="small" checked>
+              <label for="box2-size-small">Small</label>
+              
+              <input type="radio" id="box2-size-medium" name="box2-size" value="medium">
+              <label for="box2-size-medium">Medium</label>
+              
+              <input type="radio" id="box2-size-large" name="box2-size" value="large">
+              <label for="box2-size-large">Large</label>
+            </div>
+          </div>
+
+          <div class="color-container" id="box2-color">
+            <p class="color-label">Color</p>
+            <div class="color-selector">
+              <input type="radio" id="box2-color-black" name="box2-color" value="black"checked>
+              <label for="box2-color-black">Black</label>
+              
+              <input type="radio" id="box2-color-white" name="box2-color" value="white">
+              <label for="box2-color-white">White</label>
+              
+              <input type="radio" id="box2-color-beige" name="box2-color" value="beige">
+              <label for="box2-color-beige">Beige</label>
+            </div>
+          </div>
+
+          <div class="quantity-container">
+            <p class="quantity-label">Quantity</p>
+            <div class="quantity-selector">
+              <button onclick="changeQuantity(-1, 'quantityBox2')">-</button>
+              <input type="text" id="quantityBox2" value="1">
+              <button onclick="changeQuantity(1, 'quantityBox2')">+</button>
+            </div>
+          </div>
+
+          <div class="quick-add-btns">
+            <a class="add-to-cart href="#">Add to cart</a>
+            <a class="buy-it-now" href="#">Buy it now</a>
+          </div>
+           
+        </div>
+      </div>
+
+
+
+      <div class="quick-add-product" data-name="Product 13" data-price="L.E 600" data-images='{"black":"img/Quick-add/Product14-Black.webp", "white":"img/Quick-add/Product14-White.webp", "beige":"img/Quick-add/Product14-Beige.webp"}'>
+        <div class="quick-img-10 quick-img"></div>
+        <div class="quick-add-text-box">
+          <p class="brand">22H</p>
+          <h1 class="item-name">"Item Name"</h1>
+          <p class="price">L.E 600</p>
+          <div class="size-container" id="box3-size">
+            <p class="size-label">Size</p>
+            <div class="size-selector">
+              <input type="radio" id="box3-size-small" name="box3-size" value="small" checked>
+              <label for="box3-size-small">Small</label>
+              
+              <input type="radio" id="box3-size-medium" name="box3-size" value="medium">
+              <label for="box3-size-medium">Medium</label>
+              
+              <input type="radio" id="box3-size-large" name="box3-size" value="large">
+              <label for="box3-size-large">Large</label>
+            </div>
+          </div>
+
+          <div class="color-container" id="box3-color">
+            <p class="color-label">Color</p>
+            <div class="color-selector">
+              <input type="radio" id="box3-color-black" name="box3-color" value="black">
+              <label for="box3-color-black">Black</label>
+              
+              <input type="radio" id="box3-color-white" name="box3-color" value="white">
+              <label for="box3-color-white">White</label>
+              
+              <input type="radio" id="box3-color-beige" name="box3-color" value="beige" checked>
+              <label for="box3-color-beige">Beige</label>
+            </div>
+          </div>
+
+          
+          <div class="quantity-container">
+            <p class="quantity-label">Quantity</p>
+            <div class="quantity-selector">
+              <button onclick="changeQuantity(-1, 'quantityBox3')">-</button>
+              <input type="text" id="quantityBox3" value="1">
+              <button onclick="changeQuantity(1, 'quantityBox3')">+</button>
+            </div>
+          </div>
+
+          
+          <div class="quick-add-btns">
+            <a class="add-to-cart href="#">Add to cart</a>
+            <a class="buy-it-now" href="#">Buy it now</a>
+           </div>
+        </div>
+      </div>
+    </div>
+
+
+    </section>
+
+    
+
+
+
+    <section class="section partition-2">
+      <h2>HOODIES</h2>
+
+      <div class="cards">
+        <div class="card product-card" data-name="Product 5" data-price="L.E 600" data-img="img/cards/Back5.webp">
+          <div class="card-img-5 card-img"></div>
+          <div class="card-detials">
+            <p class="brand">22H</p>
+            <p class="item-name">"Item Name"</p>
+            <p class="price">L.E 600</p>
+          </div>
+        </div>
+
+        <div class="card product-card" data-name="Product 6" data-price="L.E 600" data-img="img/cards/Back6.webp">
+          <div class="card-img-6 card-img"></div>
+          <div class="card-detials">
+            <p class="brand">22H</p>
+            <p class="item-name">"Item Name"</p>
+            <p class="price">L.E 600</p>
+          </div>
+        </div>
+
+        <div class="card product-card" data-name="Product 7" data-price="L.E 600" data-img="img/cards/Back7.webp">
+          <div class="card-img-7 card-img"></div>
+          <div class="card-detials">
+            <p class="brand">22H</p>
+            <p class="item-name">"Item Name"</p>
+            <p class="price">L.E 600</p>
+          </div>
+        </div>
+
+        <div class="card product-card" data-name="Product 8" data-price="L.E 600" data-img="img/cards/Back8.webp">
+          <div class="card-img-8 card-img"></div>
+          <div class="card-detials">
+            <p class="brand">22H</p>
+            <p class="item-name">"Item Name"</p>
+            <p class="price">L.E 600</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<footer>
+  <div class="footer-container">
+    <div class="logo-col">
+      <a href="#"><img class="footer-logo" src="img/22H.png" alt=""></a>
+      <p class="copyright">&copy; 2024, 22H. All rights reserved.</p>
+
+      <div class="social-links">  
+        <a href="https://www.instagram.com/hazeemelsayeed/" target="_blank"><ion-icon class="social-icon" name="logo-instagram"></ion-icon>
+        <a href="https://www.tiktok.com/@hazeemelsayeed" target="_blank"><ion-icon class="social-icon" name="logo-tiktok"></ion-icon>
+      </div>
+
+    </div>
+    <div class="info-col">
+      <a class="about-us" href="#">About Us</a> 
+      <a class="contact-us" href="#">Contact Us</a> 
+      <a class="shipping-and-returns" href="#">Shipping &amp; Returns</a> 
+
+    </div>
+
+    <div class="email-col">
+      <p class="email-label">Exclusive Benefits</p>
+      <div class="email-bar">
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter email here"
+          name="email"
+          required
+        />
+        <ion-icon class="email-arrow" name="chevron-forward-circle-outline"></ion-icon>
+      </div>
+      <p>Apply for our free membership to receive exclusive deals, news, and events</p>
+    </div>
+    
+
+  </div>
+
+</footer>
+
+
+<div class="modal--sign-up hidden">
+  <button class="btn--close-modal">&times;</button>
+  <h2 class="modal--sign-up__header">
+    Open account
+  </h2>
+  <form class="modal--sign-up__form">
+    <label>First Name</label>
+    <input type="text" />
+    <label>Last Name</label>
+    <input type="text" />
+    <label>Email Address</label>
+    <input type="email" />
+    <button class="modal--sign-up-btn">Next step &rarr;</button>
+  </form>
+</div>
+<div class="overlay hidden"></div>
+
+
+  </body>
+</html>
